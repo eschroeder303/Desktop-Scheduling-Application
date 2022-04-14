@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.customerController">
+    <VBox layoutX="105.0" layoutY="55.0" prefHeight="380.0" prefWidth="69.0">
+        <Label fx:id="idLabel" text="ID" />
+        <Label fx:id="nameLabel" layoutX="10.0" layoutY="10.0" text="Name">
+            <padding>
+                <Insets top="35.0" />
+            </padding>
+        </Label>
+        <Label fx:id="addressLabel" layoutX="10.0" layoutY="27.0" text="Address">
+            <padding>
+                <Insets top="35.0" />
+            </padding>
+        </Label>
+        <Label fx:id="postalLabel" layoutX="10.0" layoutY="64.0" text="Postal Code">
+            <padding>
+                <Insets top="35.0" />
+            </padding>
+        </Label>
+        <Label fx:id="phoneLabel" layoutX="10.0" layoutY="101.0" text="Phone">
+            <padding>
+                <Insets top="35.0" />
+            </padding>
+        </Label>
+        <Label fx:id="countryLabel" layoutX="10.0" layoutY="138.0" text="Country">
+            <padding>
+                <Insets top="35.0" />
+            </padding>
+        </Label>
+        <Label fx:id="divisionidLabel" layoutX="10.0" layoutY="175.0" text="Division">
+            <padding>
+                <Insets top="35.0" />
+            </padding>
+        </Label>
+    </VBox>
+    <VBox layoutX="174.0" layoutY="56.0" prefHeight="380.0" prefWidth="173.0">
+        <TextField fx:id="idField" disable="true" />
+        <TextField fx:id="nameField" layoutX="10.0" layoutY="10.0">
+            <VBox.margin>
+                <Insets top="25.0" />
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="addressField" layoutX="10.0" layoutY="58.0">
+            <VBox.margin>
+                <Insets top="26.0" />
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="postalField" layoutX="10.0" layoutY="110.0">
+            <VBox.margin>
+                <Insets top="26.0" />
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="phoneField" layoutX="10.0" layoutY="160.0">
+            <VBox.margin>
+                <Insets top="26.0" />
+            </VBox.margin>
+        </TextField>
+        <ComboBox fx:id="countryCombo" onAction="#countryComboSelect" prefHeight="25.0" prefWidth="173.0">
+            <VBox.margin>
+                <Insets top="28.0" />
+            </VBox.margin>
+        </ComboBox>
+        <ComboBox fx:id="divisionidCombo" layoutX="10.0" layoutY="264.0" prefHeight="25.0" prefWidth="173.0">
+            <VBox.margin>
+                <Insets top="28.0" />
+            </VBox.margin>
+        </ComboBox>
+    </VBox>
+    <Label fx:id="customerLabel" layoutX="174.0" layoutY="12.0" text="Customer">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Button layoutX="228.0" layoutY="430.0" mnemonicParsing="false" onAction="#saveButtonClick" prefHeight="25.0" prefWidth="52.0" text="Save" />
+    <Button layoutX="294.0" layoutY="430.0" mnemonicParsing="false" onAction="#cancelButtonClick" text="Cancel" />
+</AnchorPane>

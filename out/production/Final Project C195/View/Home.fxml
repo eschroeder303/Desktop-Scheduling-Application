@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.homeController">
+    <TableView fx:id="customerTable" layoutX="32.0" layoutY="41.0" prefHeight="240.0" prefWidth="924.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="48.0" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="156.0" text="Name" />
+            <TableColumn fx:id="addressColumn" prefWidth="200.0" text="Address" />
+            <TableColumn fx:id="postalcodeColumn" minWidth="0.0" prefWidth="85.0" text="Postal Code" />
+            <TableColumn fx:id="phoneColumn" prefWidth="150.0" text="Phone" />
+            <TableColumn fx:id="countryColumn" prefWidth="81.0" text="Country" />
+            <TableColumn fx:id="divisionColumn" prefWidth="190.0" text="Division" />
+        </columns>
+    </TableView>
+    <Label fx:id="customersLabel" layoutX="449.0" layoutY="8.0" prefHeight="30.0" prefWidth="100.0" text="Customers">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <TableView fx:id="appointmentTable" layoutX="32.0" layoutY="351.0" prefHeight="240.0" prefWidth="924.0">
+        <columns>
+            <TableColumn fx:id="apptidColumn" prefWidth="96.0" text="Appointment ID" />
+            <TableColumn fx:id="titleColumn" prefWidth="73.0" text="Title" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="116.0" text="Description" />
+            <TableColumn fx:id="locationColumn" prefWidth="106.0" text="Location" />
+            <TableColumn fx:id="contactColumn" prefWidth="68.0" text="Contact" />
+            <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="111.0" text="Type" />
+            <TableColumn fx:id="startColumn" prefWidth="109.0" text="Start Date / Time" />
+            <TableColumn fx:id="endColumn" prefWidth="109.0" text="End Date / Time" />
+            <TableColumn fx:id="customeridColumn" minWidth="0.0" prefWidth="76.0" text="Customer ID" />
+            <TableColumn fx:id="useridColumn" minWidth="0.0" prefWidth="47.0" text="User ID" />
+        </columns>
+    </TableView>
+    <Label fx:id="appointmentsLabel" layoutX="434.0" layoutY="315.0" prefHeight="30.0" prefWidth="129.0" text="Appointments">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <HBox layoutX="553.0" layoutY="287.0" prefHeight="27.0" prefWidth="403.0">
+        <Button mnemonicParsing="false" onAction="#addCustomerClick" prefHeight="25.0" prefWidth="112.0" text="Add Customer">
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </Button>
+        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateCustomerClick" prefHeight="25.0" prefWidth="129.0" text="Update Customer">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </Button>
+        <Button layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteCustomerClick" prefHeight="25.0" prefWidth="124.0" text="Delete Customer">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <HBox layoutX="678.0" layoutY="595.0" prefHeight="27.0" prefWidth="278.0">
+        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateAppointmentClick" text="Update Appointment">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </Button>
+        <Button layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteAppointmentClick" text="Delete Appointment">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <HBox fx:id="radioToggle" layoutX="45.0" layoutY="595.0" prefHeight="27.0" prefWidth="205.0">
+        <children>
+            <RadioButton fx:id="allRadioButton" mnemonicParsing="false" onAction="#allWeekMonthToggle" selected="true" text="All">
+                <toggleGroup>
+                    <ToggleGroup fx:id="allWeekMonthToggle" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="weekRadioButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#allWeekMonthToggle" text="Week" toggleGroup="$allWeekMonthToggle">
+                <HBox.margin>
+                    <Insets left="15.0" />
+                </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="monthRadioButton" layoutX="107.0" layoutY="10.0" mnemonicParsing="false" onAction="#allWeekMonthToggle" text="Month" toggleGroup="$allWeekMonthToggle">
+                <HBox.margin>
+                    <Insets left="15.0" />
+                </HBox.margin>
+            </RadioButton>
+        </children>
+    </HBox>
+    <Button fx:id="reportsButton" layoutX="45.0" layoutY="293.0" mnemonicParsing="false" onAction="#reportsButtonClick" prefHeight="43.0" prefWidth="93.0" text="Reports" />
+    <Button layoutX="564.0" layoutY="595.0" mnemonicParsing="false" onAction="#addAppointmentClick" text="Add Appointment" />
+    <Label fx:id="appointmentAlertLabel" alignment="CENTER" layoutX="148.0" layoutY="280.0" prefHeight="70.0" prefWidth="278.0" textFill="RED" />
+</AnchorPane>

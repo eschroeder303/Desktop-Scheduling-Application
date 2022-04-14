@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane accessibleRole="PASSWORD_FIELD" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.loginController">
+    <TextField fx:id="usernameField" layoutX="226.0" layoutY="140.0" />
+    <PasswordField fx:id="passwordField" accessibleRole="PASSWORD_FIELD" layoutX="226.0" layoutY="176.0">
+    </PasswordField>
+    <Label fx:id="usernameLabel" layoutX="103.0" layoutY="143.0" text="Username:" />
+    <Label fx:id="passwordLabel" layoutX="108.0" layoutY="179.0" text="Password:" />
+    <Button fx:id="loginButton" layoutX="226.0" layoutY="219.0" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="26.0" prefWidth="150.0" text="Login" />
+    <Label fx:id="locationTitleLabel" alignment="CENTER" layoutX="111.0" layoutY="292.0" text="Location:" textAlignment="CENTER" />
+    <Label fx:id="locationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="224.0" layoutY="289.0" prefHeight="26.0" prefWidth="150.0" text="Label" textAlignment="CENTER" textFill="#060d86" />
+    <Label fx:id="loginError" alignment="CENTER" layoutX="186.0" layoutY="340.0" prefHeight="17.0" prefWidth="233.0" textAlignment="CENTER" textFill="RED" />
+</AnchorPane>

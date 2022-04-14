@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.reportController">
+    <TableView fx:id="reportsTable" layoutX="10.0" layoutY="41.0" prefHeight="396.0" prefWidth="939.0" />
+    <Label fx:id="reportLabel" layoutX="443.0" layoutY="8.0" text="Reports">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Button fx:id="backButton" layoutX="720.0" layoutY="517.0" mnemonicParsing="false" onAction="#backButtonClick" prefHeight="45.0" prefWidth="89.0" text="Back" />
+    <HBox alignment="CENTER" layoutX="126.0" layoutY="439.0" prefHeight="73.0" prefWidth="711.0" spacing="30.0">
+        <Label text="Sort:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="totalRadio" mnemonicParsing="false" onAction="#reportsRadioToggle" selected="true" text="Total Appointments by Type and Month">
+            <toggleGroup>
+                <ToggleGroup fx:id="reportsRadioToggle" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="allRadio" mnemonicParsing="false" onAction="#reportsRadioToggle" text="All Contact Schedules" toggleGroup="$reportsRadioToggle" />
+        <RadioButton fx:id="schedulesRadio" mnemonicParsing="false" onAction="#reportsRadioToggle" text="Appointments by Division" toggleGroup="$reportsRadioToggle" />
+    </HBox>
+</AnchorPane>
